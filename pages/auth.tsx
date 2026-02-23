@@ -1,3 +1,5 @@
+import input from "../components/input";
+
 const Auth = () => {
   return (
     <div className="relative h-screen w-full bg-cover bg-center bg-fixed bg-no-repeat" style={{backgroundImage: "url(/images/hero.jpg)"}}>
@@ -10,7 +12,9 @@ const Auth = () => {
             <h2 className="text-white text-4xl mb-8 font-semibold">
               Sign In
               </h2>
-              <div className="flex flex-col gap-4"></div>
+              <div className="flex flex-col gap-4">
+                <input />
+              </div>
           </div>
         </div>
       </div>
