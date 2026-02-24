@@ -1,5 +1,5 @@
 import NextAuth from "next-auth";
-import Credentials from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 import Email from "next-auth/providers/email";
 import { error } from "node:console";
 import prismadb from "../../../lib/prismadb";
@@ -8,9 +8,9 @@ import {compare} from 'bcrypt';
 
 export default NextAuth ({
   providers: [
-    Credentials({
-      id: 'Credentials',
-      name: 'Credentials',
+    CredentialsProvider({
+      id: 'credentials',
+      name: 'credentials',
       credentials: {
         email:{
          label: 'Email',

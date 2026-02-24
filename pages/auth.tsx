@@ -3,6 +3,7 @@ import Input from "../components/input";
 import axios from 'axios';
 import {signIn} from 'next-auth/react';
 import { useRouter } from "next/router";
+import { redirect } from "next/dist/server/api-utils";
 
 
 const Auth = () => {
@@ -29,6 +30,7 @@ const Auth = () => {
         });
 
         router.push('/');
+      
       }catch(error){
         console.log(error);
       }
@@ -66,6 +68,7 @@ const Auth = () => {
                 {variant === 'register' && ( 
                   <Input 
                     label="Username"
+                    type="text"
                     onChange={(ev: any) => setName(ev.target.value)}
                     id="name"
                     value={name}
