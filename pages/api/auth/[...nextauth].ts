@@ -2,7 +2,7 @@ import NextAuth from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Email from "next-auth/providers/email";
 import { error } from "node:console";
-import prismadb from "../../lib/prismadb";
+import prismadb from "../../../lib/prismadb";
 import {compare} from 'bcrypt';
 
 
